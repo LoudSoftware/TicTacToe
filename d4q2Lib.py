@@ -43,7 +43,7 @@ def testLignes(tab):
     for i in range(2):
         if tab[i][0] == tab[i][1] == tab[i][2] == '0':
             return 'X'
-        elif tab[i][0] == tab[i][1] == tab[1][2] == 'X':
+        elif tab[i][0] == tab[i][1] == tab[i][2] == 'X':
             return '0'
 
     return '-'  # a changer pour retourner le gagnant, ou '-' s'il n'y a pas de gagnant
@@ -57,6 +57,12 @@ def testCols(tab):
    * Si on trouve, le caractere 'X' ou 'O' et retourné, sinon '-' est retourné.
    * Preconditions: tab est une reference a une matrice n x n qui contient '-', 'X' ou 'O'
    '''
+
+    for i in range(2):
+        if tab[0][i] == tab[1][i] == tab[2][i] == '0':
+            return 'X'
+        elif tab[0][i] == tab[1][i] == tab[2][i] == 'X':
+            return '0'
 
     # a completer
 
