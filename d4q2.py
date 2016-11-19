@@ -24,8 +24,8 @@ def afficheTableau(tab):
         while col < len(tab[row]):
             print(" ", tab[row][col], end="")
             col += 1
-            print()
-            row += 1
+        print()
+        row += 1
 
 def joue(tab, joueur):
     '''
@@ -60,17 +60,17 @@ tableau = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']]  # la seule matric
 
 reponse = input("Commence un jeu (O ou N): ");
 while reponse == 'o' or reponse == 'O':
-        effaceTableau(tableau)  # prepare le tableau de jeu
-        gagnant = False  # initialise la variable gagnant
-        while not gagnant:
-            afficheTableau(tableau)  # affiche le tableau de jeu
-            joue(tableau, 'X')  # demande joueur X de jouer
-            gagnant = verifieGagner(tableau)  # il a gagné?
+    effaceTableau(tableau)  # prepare le tableau de jeu
+    gagnant = False  # initialise la variable gagnant
+    while not gagnant:
+        afficheTableau(tableau)  # affiche le tableau de jeu
+        joue(tableau, 'X')  # demande joueur X de jouer
+        gagnant = verifieGagner(tableau)  # il a gagné?
         if not gagnant:
             #  pas de gagnant, l’autre joueur peut jouer
             afficheTableau(tableau)  # affiche le tableau de jeu
             joue(tableau, 'O')  # demande joueur O de jouer
             gagnant = verifieGagner(tableau)  # il a gagné?
 
-        afficheTableau(tableau)  # affiche le tableau de jeu
-        reponse = input("Commence un jeu (O ou N): ")  # nouveau jeu?
+    afficheTableau(tableau)  # affiche le tableau de jeu
+    reponse = input("Commence un jeu (O ou N): ")  # nouveau jeu?
