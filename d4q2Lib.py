@@ -5,11 +5,10 @@
    Elle ne crée pas une nouvelle matrice
    Preconditions: tab est une reference a une matrice n x n qui contient '-', 'X' ou 'O'
    '''
-
-
-
+    for i in range(0, len(tab)):
+        for j in range(0, len(tab[0])):
+            tab[i][j] = '-'
     # a completer
-
     # retourne rien
 
 
