@@ -26,7 +26,8 @@ def verifieGagner(tab):
     * pour verifier s'il y a un gagnant.
     * Ces fonctions retournent le gagnant 'X' ou 'O', ou '-' s'il n'y a pas de gagnant
     '''
-
+    if testLignes(tab) == 'X':
+        print("")
     # a completer
 
     return False  # a changer
