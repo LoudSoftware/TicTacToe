@@ -77,7 +77,7 @@ def testDiags(tab):
    * Preconditions: tab est une reference a une matrice n x n qui contient '-', 'X' ou 'O'
    '''
     # Verifie pour un gagnant 'X' en diagonal ensuite pour un gagnant 'O' en diagonal.
-    list =('X','O')
+    list = ('X', 'O')
     for i in list:
         if tab[0][0] == tab[1][1] == tab[2][2] == i:
             return i
