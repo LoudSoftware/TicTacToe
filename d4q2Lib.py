@@ -100,5 +100,5 @@ def testMatchNul(tab):
         line = tab[i]
         count = line.count('-')
         if count > 0:
-            return True
-    return False
+            return False
+    return True
