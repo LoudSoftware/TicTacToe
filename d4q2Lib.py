@@ -30,7 +30,8 @@ def verifieGagner(tab):
         return True
     for i in ['X', 'O']:
         if testLignes(tab) == i or testCols(tab) == i or testDiags(tab) == i:
-            print("Joueur {} a gagné!").format(i)
+            message = ("Joueur {} a gagné!").format(i)
+            print(message)
             return True
     return False
 
