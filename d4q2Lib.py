@@ -97,6 +97,8 @@ def testMatchNul(tab):
    '''
     # return true is '-' est encore dans le tableau, False si tout les position sont occupe soit par un 'X' ou 'O'
     for i in range(2):
-        if list[i].count('-') > 0:
+        line = tab[i]
+        count = line.count('-')
+        if count > 0:
             return True
     return False
