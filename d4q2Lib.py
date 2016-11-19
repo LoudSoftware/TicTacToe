@@ -8,7 +8,6 @@
     for i in range(0, len(tab)):
         for j in range(0, len(tab[0])):
             tab[i][j] = '-'
-    # a completer
     # retourne rien
 
 
@@ -26,11 +25,14 @@ def verifieGagner(tab):
     * pour verifier s'il y a un gagnant.
     * Ces fonctions retournent le gagnant 'X' ou 'O', ou '-' s'il n'y a pas de gagnant
     '''
-    if testLignes(tab) == 'X':
-        print("")
-    # a completer
-
-    return False  # a changer
+    if testMatchNul(tab) is True:
+        print("Match nul")
+        return True
+    for i in ['X', 'O']:
+        if testLignes(tab) == i or testCols(tab) == i or testDiags(tab) == i:
+            print("Joueur {} a gagné!").format(i)
+            return True
+    return False
 
 
 def testLignes(tab):
