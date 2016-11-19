@@ -8,8 +8,6 @@
     for i in range(0, len(tab)):
         for j in range(0, len(tab[0])):
             tab[i][j] = '-'
-    # retourne rien
-
 
 def verifieGagner(tab):
     '''(list) ->  bool
@@ -35,7 +33,6 @@ def verifieGagner(tab):
             return True
     return False
 
-
 def testLignes(tab):
     ''' (list) ->  str
    * verifie s’il y a une ligne gagnante.
@@ -50,8 +47,6 @@ def testLignes(tab):
         elif tab[i][0] == tab[i][1] == tab[i][2] == 'X':
             return 'O'
     return '-'  # a changer pour retourner le gagnant, ou '-' s'il n'y a pas de gagnant
-
-
 
 def testCols(tab):
     ''' (list) ->  str
@@ -69,7 +64,6 @@ def testCols(tab):
             return 'O'
     return '-'   # a changer pour retourner le gagnant, ou '-' s'il n'y a pas de gagnant
 
-
 def testDiags(tab):
     ''' (list) ->  str
    * cherche trois 'X' ou trois 'O' dans une diagonale.
@@ -85,8 +79,6 @@ def testDiags(tab):
         elif tab[0][2] == tab[1][1] == tab[2][0] == i:
             return i
     return '-'   # a changer pour retourner le gagnant, ou '-' s'il n'y a pas de gagnant
-
-
 
 def testMatchNul(tab):
     '''(list) ->  bool
